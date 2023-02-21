@@ -25,7 +25,7 @@ truncate_to_repo = true
 truncation_symbol = "…/"
 
 [git_branch]
-symbol = ""
+symbol = ""
 format = "on [$symbol$branch]($style) "
 truncation_length = 20
 truncation_symbol = "…/"
