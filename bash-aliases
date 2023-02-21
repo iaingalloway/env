@@ -1,0 +1,10 @@
+#~/.bash_aliases
+
+# kubectl
+alias k=kubectl
+complete -o default -F __start_kubectl k
+
+alias kclear='kubectl config unset current-context'
+
+alias kuse='kubectl config use-context'
+complete -F __start_kubectl kuse
