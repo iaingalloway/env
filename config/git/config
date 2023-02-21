@@ -1,3 +1,41 @@
 [user]
-	name = Iain Galloway
-	email = iain.galloway@gmail.com
+    name = Iain Galloway
+    email = iain.galloway@gmail.com
+    useConfigOnly = true
+
+[github]
+    user = iaingalloway
+
+[alias]
+    b = branch
+
+    co = checkout
+
+    d = difftool
+
+    pushf = push --force-with-lease
+
+    s = status
+
+    unstage = reset HEAD
+
+    # Append the currently staged files to the latest commit
+    append = commit --amend --reuse-message=HEAD
+
+    # Work out the name of main branch
+    main = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
+
+    # Rebase on top of origin/main
+    up = !git fetch origin --prune && git rebase origin/$(git main)
+
+[fetch]
+    prune = true
+[init]
+	defaultBranch = main
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
+[rebase]
+    autostash = true
+    autosquash = true
