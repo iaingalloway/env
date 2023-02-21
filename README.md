@@ -12,5 +12,5 @@ Powershell (Needs an elevated prompt or Developer Mode):
 Powershell:
 ```powershell
 git clone https://github.com/iaingalloway/env.git source/repos/env
-.source\reposcd\env\Setup-Env.ps1
+.\source\repos\env\Setup-Env.ps1
 ```
