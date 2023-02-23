@@ -10,7 +10,7 @@ bash repos/env/setup-env.sh
 
 Powershell (Needs an elevated prompt or Developer Mode):
 ```powershell
-New-Item -Type Directory source\repos
+New-Item -Type Directory source\repos -Force
 git clone https://github.com/iaingalloway/env.git source/repos/env
 .\source\repos\env\Setup-Env.ps1
 ```
