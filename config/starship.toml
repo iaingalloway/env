@@ -7,17 +7,17 @@ add_newline = true
 format = """\
 [](fg:#000DB8)\
 $os\
-[](bg:#7C9E00 fg:#000DB8)\
+[](bg:#09AB98 fg:#000DB8)\
 $directory\
-[](bg:#B84464 fg:#7C9E00)\
+[](bg:#B84464 fg:#09AB98)\
 $git_branch\
 $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-[](bg:#09AB98 fg:#B84464)\
+[](bg:#7C9E00 fg:#B84464)\
 $kubernetes\
-[](fg:#09AB98)
+[](fg:#7C9E00)
 $jobs\
 $sudo\
 $character"""
@@ -28,7 +28,7 @@ error_symbol = '[](bold red)'
 
 [directory]
 format = '[ $path ]($style)'
-style = 'bg:#7C9E00'
+style = 'bg:#09AB98'
 home_symbol = ''
 truncate_to_repo = true
 truncation_symbol = '…/'
@@ -70,7 +70,7 @@ renamed = '襁'
 deleted = ''
 
 [kubernetes]
-style = 'bg:#09AB98'
+style = 'bg:#7C9E00'
 disabled = false
 symbol = '⎈'
 format = '[ $symbol$context( \($namespace\)) ]($style)'
