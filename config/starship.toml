@@ -48,7 +48,6 @@ commit_hash_length = 4
 tag_symbol = '🔖 '
 
 [git_metrics]
-style = "bg:#D98B6C"
 added_style = 'bold blue'
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
