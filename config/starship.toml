@@ -23,8 +23,8 @@ $sudo\
 $character"""
 
 [character]
-success_symbol = '[](bold green)'
-error_symbol = '[](bold red)'
+success_symbol = '[](#7C9E00)'
+error_symbol = '[](#B84464)'
 
 [directory]
 format = '[ $path ]($style)'
@@ -52,7 +52,7 @@ format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 [git_state]
 style = 'bg:#B84464'
 format = '[\($state($progress_current of $progress_total)\)]($style) '
-cherry_pick = '[🍒 PICKING](bold red)'
+cherry_pick = '[🍒 PICKING](bg:#B84464 fg:#FF8B6B)'
 
 [git_status]
 format = '[ $up_to_date$conflicted$untracked$modified$renamed$deleted$stashed$ahead_behind$staged ]($style)'
