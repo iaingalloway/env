@@ -17,9 +17,7 @@ $git_metrics\
 $git_status\
 [](bg:#729FB8 fg:#CC8366)\
 $kubernetes\
-[](bg:#06969A fg:#729FB8)\
-$docker_context\
-[](fg:#06969A)
+[](fg:#729FB8)
 $jobs\
 $sudo\
 $character"""
@@ -70,10 +68,6 @@ modified = '[ ](bg:#CC8366 fg:#B82E2E)'
 staged = '+$count'
 renamed = '襁 '
 deleted = ' '
-
-[docker_context]
-style = 'bg:#06969A'
-only_with_files = false
 
 [kubernetes]
 style = 'bg:#729FB8'
