@@ -5,19 +5,19 @@
 add_newline = true
 
 format = """\
-[](fg:#9A348E)\
+[](fg:#000DB8)\
 $os\
-[](bg:#DA627D fg:#9A348E)\
+[](bg:#7C9E00 fg:#000DB8)\
 $directory\
-[](bg:#CC8366 fg:#DA627D)\
+[](bg:#B84464 fg:#7C9E00)\
 $git_branch\
 $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-[](bg:#729FB8 fg:#CC8366)\
+[](bg:#09AB98 fg:#B84464)\
 $kubernetes\
-[](fg:#729FB8)
+[](fg:#09AB98)
 $jobs\
 $sudo\
 $character"""
@@ -28,20 +28,20 @@ error_symbol = '[](bold red)'
 
 [directory]
 format = '[ $path ]($style)'
-style = 'bg:#DA627D'
+style = 'bg:#7C9E00'
 home_symbol = ''
 truncate_to_repo = true
 truncation_symbol = '…/'
 
 [git_branch]
 format = '[ $branch]($style)'
-style = 'bg:#CC8366'
+style = 'bg:#B84464'
 symbol = ''
 truncation_length = 20
 truncation_symbol = '…/'
 
 [git_commit]
-style = 'bg:#CC8366'
+style = 'bg:#B84464'
 commit_hash_length = 4
 tag_symbol = '🔖 '
 
@@ -50,27 +50,27 @@ added_style = 'bold blue'
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [git_state]
-style = 'bg:#CC8366'
+style = 'bg:#B84464'
 format = '[\($state($progress_current of $progress_total)\)]($style) '
 cherry_pick = '[🍒 PICKING](bold red)'
 
 [git_status]
 format = '[ $up_to_date$conflicted$untracked$modified$renamed$deleted$stashed$ahead_behind$staged ]($style)'
-style = 'bg:#CC8366'
+style = 'bg:#B84464'
 conflicted = '🏳'
-up_to_date = '[](bg:#CC8366 fg:#6EFF97)'
-untracked = '[](bg:#CC8366 fg:#FFCD8C)'
+up_to_date = '[](bg:#B84464 fg:#6EFF97)'
+untracked = '[](bg:#B84464 fg:#FFCD8C)'
 ahead = '${count}'
 diverged = '${ahead_count}${behind_count}'
 behind = '${count}'
 stashed = ''
-modified = '[](bg:#CC8366 fg:#FFCD8C)'
+modified = '[](bg:#B84464 fg:#FFCD8C)'
 staged = '+$count'
 renamed = '襁'
 deleted = ''
 
 [kubernetes]
-style = 'bg:#729FB8'
+style = 'bg:#09AB98'
 disabled = false
 symbol = '⎈'
 format = '[ $symbol$context( \($namespace\)) ]($style)'
@@ -82,7 +82,7 @@ format = '[ $symbol$context( \($namespace\)) ]($style)'
 [os]
 disabled = false
 format = '[$symbol ]($style)'
-style = 'bg:#9A348E'
+style = 'bg:#000DB8'
 
 [os.symbols]
 Ubuntu = ''
