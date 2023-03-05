@@ -1,6 +1,6 @@
 # ~/.config/starship.toml
 
-"$schema" = 'https://starship.rs/config-schema.json'
+'$schema' = 'https://starship.rs/config-schema.json'
 
 add_newline = true
 
@@ -25,25 +25,25 @@ $sudo\
 $character"""
 
 [character]
-success_symbol = "[](bold green)"
-error_symbol = "[](bold red)"
+success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
 
 [directory]
-format = "[ $path ]($style)"
+format = '[ $path ]($style)'
 style = 'bg:#DA627D'
-home_symbol = ""
+home_symbol = ''
 truncate_to_repo = true
-truncation_symbol = "…/"
+truncation_symbol = '…/'
 
 [git_branch]
-format = "[ $branch]($style)"
-style = "bg:#D98B6C"
-symbol = ""
+format = '[ $branch]($style)'
+style = 'bg:#D98B6C'
+symbol = ''
 truncation_length = 20
-truncation_symbol = "…/"
+truncation_symbol = '…/'
 
 [git_commit]
-style = "bg:#D98B6C"
+style = 'bg:#D98B6C'
 commit_hash_length = 4
 tag_symbol = '🔖 '
 
@@ -52,13 +52,13 @@ added_style = 'bold blue'
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [git_state]
-style = "bg:#D98B6C"
+style = 'bg:#D98B6C'
 format = '[\($state($progress_current of $progress_total)\)]($style) '
 cherry_pick = '[🍒 PICKING](bold red)'
 
 [git_status]
 format = '[ $up_to_date$conflicted$untracked$modified$renamed$deleted$stashed$ahead_behind$staged ]($style)'
-style = "bg:#D98B6C"
+style = 'bg:#D98B6C'
 conflicted = '🏳'
 up_to_date = '[](bg:#D98B6C fg:#2B994A)'
 untracked = '[](bg:#D98B6C fg:#B82E2E)'
@@ -72,11 +72,11 @@ renamed = '襁'
 deleted = ''
 
 [docker_context]
-style = "bg:#86BBD8"
+style = 'bg:#86BBD8'
 only_with_files = false
 
 [kubernetes]
-style = "bg:#06969A"
+style = 'bg:#06969A'
 disabled = false
 symbol = '⎈'
 format = '[ $symbol$context( \($namespace\)) ]($style)'
@@ -87,7 +87,7 @@ format = '[ $symbol$context( \($namespace\)) ]($style)'
 
 [shell]
 disabled = false
-format = "[$indicator ]($style)"
-style = "bg:#9A348E"
-bash_indicator = ""
-powershell_indicator = ""
+format = '[$indicator ]($style)'
+style = 'bg:#9A348E'
+bash_indicator = ''
+powershell_indicator = ''
