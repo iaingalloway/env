@@ -72,12 +72,14 @@ renamed = '襁'
 deleted = ''
 
 [docker_context]
+style = "bg:#86BBD8"
 only_with_files = false
 
 [kubernetes]
+style = "bg:#06969A"
 disabled = false
 symbol = '⎈'
-format = 'on [$symbol$context( \($namespace\))](bold blue) '
+format = '[ $symbol$context( \($namespace\)) ]($style)'
 
 [kubernetes.context_aliases]
 'gke.*_(?P<var_cluster>[\w-]+)' = 'gke-$var_cluster'
