@@ -9,7 +9,6 @@ $username$hostname$directory$git_branch$git_commit$git_state$git_metrics$git_sta
 $shell$jobs$sudo$character"""
 
 [character]
-format = "$symbol"
 success_symbol = ""
 error_symbol = "[|](bold red)"
 
@@ -73,5 +72,6 @@ format = 'on [$symbol$context( \($namespace\))](bold blue) '
 
 [shell]
 disabled = false
+format = "[$indicator]($style)"
 bash_indicator = ""
 powershell_indicator = ""
