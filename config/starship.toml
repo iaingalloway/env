@@ -6,7 +6,7 @@ add_newline = true
 
 format = """\
 [](fg:#9A348E)\
-$shell\
+$os\
 [](bg:#DA627D fg:#9A348E)\
 $directory\
 [](bg:#CC8366 fg:#DA627D)\
@@ -85,9 +85,11 @@ format = '[ $symbol$context( \($namespace\)) ]($style)'
 'gke.*_(?P<var_cluster>[\w-]+)' = 'gke-$var_cluster'
 'kind-(?P<var_cluster>[\w-]+)' = '$var_cluster'
 
-[shell]
+[os]
 disabled = false
-format = '[$indicator ]($style)'
+format = '[$symbol ]($style)'
 style = 'bg:#9A348E'
-bash_indicator = ''
-powershell_indicator = ''
+
+[os.symbols]
+Ubuntu = ''
+Windows  = ''
