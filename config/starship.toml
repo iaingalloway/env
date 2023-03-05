@@ -2,15 +2,16 @@
 
 "$schema" = 'https://starship.rs/config-schema.json'
 
-add_newline = false
+add_newline = true
 
 format = """\
 $username$hostname$directory$git_branch$git_commit$git_state$git_metrics$git_status$docker_context$kubernetes$cmd_duration
-$jobs$sudo$character"""
+$shell$jobs$sudo$character"""
 
 [character]
-success_symbol = "[➤](bold green)"
-error_symbol = "[➤](bold red)"
+format = "$symbol"
+success_symbol = ""
+error_symbol = "[|](bold red)"
 
 [username]
 format = "[$user@]($style)"
@@ -70,11 +71,7 @@ format = 'on [$symbol$context( \($namespace\))](bold blue) '
 'gke.*_(?P<var_cluster>[\w-]+)' = 'gke-$var_cluster'
 'kind-(?P<var_cluster>[\w-]+)' = '$var_cluster'
 
-[os.symbols]
-Alpine = " "
-Android = " "
-Debian = " "
-Linux = " "
-Macos = " "
-Ubuntu = " "
-Windows = " "
+[shell]
+disabled = false
+bash_indicator = ""
+powershell_indicator = ""
