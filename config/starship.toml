@@ -67,7 +67,7 @@ stashed = ''
 modified = '[](bg:#B84464 fg:#FF8B6B)'
 staged = '+$count'
 renamed = '[襁](bg:#B84464 fg:#FF8B6B)'
-deleted = ''
+deleted = '[](bg:#B84464 fg:#FF8B6B)'
 
 [kubernetes]
 style = 'bg:#7C9E00'
