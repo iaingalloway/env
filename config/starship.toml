@@ -28,34 +28,33 @@ error_symbol = '[](#B84464)'
 
 [directory]
 format = '[ $path ]($style)'
-style = 'bg:#09AB98'
 home_symbol = ''
+style = 'bg:#09AB98'
 truncate_to_repo = true
 truncation_symbol = '…/'
 
 [git_branch]
 format = '[ $branch]($style)'
-style = 'bg:#B84464'
 symbol = ''
+style = 'bg:#B84464'
 truncation_length = 20
 truncation_symbol = '…/'
 
 [git_commit]
+tag_symbol = '🔖 '
 style = 'bg:#B84464'
 commit_hash_length = 4
-tag_symbol = '🔖 '
 
 [git_metrics]
-added_style = 'bold blue'
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+added_style = 'bold blue'
 
 [git_state]
-style = 'bg:#B84464'
 format = '[\($state($progress_current of $progress_total)\)]($style) '
+style = 'bg:#B84464'
 cherry_pick = '[🍒 PICKING](bg:#B84464 fg:#FF8B6B)'
 
 [git_status]
-# format = '[ $up_to_date$conflicted$untracked$modified$renamed$deleted$stashed$ahead_behind$staged ]($style)'
 format = '[ $up_to_date$conflicted$untracked$modified$renamed$deleted$stashed$ahead_behind$staged ]($style)'
 style = 'bg:#B84464'
 conflicted = '[🏳](bg:#B84464 fg:#FF8B6B)'
@@ -71,10 +70,10 @@ renamed = '[](bg:#B84464 fg:#FF8B6B)'
 deleted = '[](bg:#B84464 fg:#FF8B6B)'
 
 [kubernetes]
-style = 'bg:#7C9E00'
 disabled = false
-symbol = '⎈'
 format = '[ $symbol$context( \($namespace\)) ]($style)'
+symbol = '⎈'
+style = 'bg:#7C9E00'
 
 [kubernetes.context_aliases]
 'gke.*_(?P<var_cluster>[\w-]+)' = 'gke-$var_cluster'
