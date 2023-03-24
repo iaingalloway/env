@@ -1,8 +1,8 @@
 # ~/.config/starship.toml
 
-# cyan:    #00FFFF  #00A8A8
-# magenta: #FF00CC  #A80086
-# green:   #CCFF00  #86A800
+# cyan:    #00FFFF  #0089BF
+# magenta: #FF00CC  #A8006A
+# green:   #CCFF00  #73A800
 # blue:    #0033FF  #0021A8
 
 '$schema' = 'https://starship.rs/config-schema.json'
@@ -12,42 +12,42 @@ add_newline = true
 format = """\
 [](fg:#0033FF)\
 $os\
-[](bg:#00A8A8 fg:#0033FF)\
+[](bg:#0089BF fg:#0033FF)\
 $directory\
-[](bg:#A80086 fg:#00A8A8)\
+[](bg:#A8006A fg:#0089BF)\
 $git_branch\
 $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-[](bg:#86A800 fg:#A80086)\
+[](bg:#73A800 fg:#A8006A)\
 $kubernetes\
-[](fg:#86A800)
+[](fg:#73A800)
 $jobs\
 $sudo\
 $character"""
 
 [character]
-success_symbol = '[](#86A800)'
-error_symbol = '[](#A80086)'
+success_symbol = '[](#73A800)'
+error_symbol = '[](#A8006A)'
 
 [directory]
 format = '[ $path ]($style)'
 home_symbol = ''
-style = 'bg:#00A8A8'
+style = 'bg:#0089BF'
 truncate_to_repo = true
 truncation_symbol = '…/'
 
 [git_branch]
 format = '[ $branch]($style)'
 symbol = ''
-style = 'bg:#A80086'
+style = 'bg:#A8006A'
 truncation_length = 20
 truncation_symbol = '…/'
 
 [git_commit]
 tag_symbol = '🔖 '
-style = 'bg:#A80086'
+style = 'bg:#A8006A'
 commit_hash_length = 4
 
 [git_metrics]
@@ -56,34 +56,34 @@ added_style = 'bold blue'
 
 [git_state]
 format = '[\($state($progress_current of $progress_total)\)]($style) '
-style = 'bg:#A80086'
-cherry_pick = '[🍒 PICKING](bg:#A80086 fg:#FF8B6B)'
+style = 'bg:#A8006A'
+cherry_pick = '[🍒 PICKING](bg:#A8006A fg:#FF8B6B)'
 
 [git_status]
 format = '[ $up_to_date$conflicted$untracked$modified$renamed$deleted$stashed$ahead_behind$staged ]($style)'
-style = 'bg:#A80086'
-conflicted = '[🏳](bg:#A80086 fg:#FF8B6B)'
-up_to_date = '[](bg:#A80086 fg:#C4FF78)'
-untracked = '[](bg:#A80086 fg:#FF8B6B)'
-ahead = '[${count}](bg:#A80086 fg:white)'
-diverged = '[${ahead_count}${behind_count}](bg:#A80086 fg:white)'
-behind = '[${count}](bg:#A80086 fg:white)'
-stashed = '[s](bg:#A80086 fg:white)'
-modified = '[](bg:#A80086 fg:#FF8B6B)'
-staged = '[+$count](bg:#A80086 fg:white)'
-renamed = '[](bg:#A80086 fg:#FF8B6B)'
-deleted = '[](bg:#A80086 fg:#FF8B6B)'
+style = 'bg:#A8006A'
+conflicted = '[🏳](bg:#A8006A fg:#FF8B6B)'
+up_to_date = '[](bg:#A8006A fg:#C4FF78)'
+untracked = '[](bg:#A8006A fg:#FF8B6B)'
+ahead = '[${count}](bg:#A8006A fg:white)'
+diverged = '[${ahead_count}${behind_count}](bg:#A8006A fg:white)'
+behind = '[${count}](bg:#A8006A fg:white)'
+stashed = '[s](bg:#A8006A fg:white)'
+modified = '[](bg:#A8006A fg:#FF8B6B)'
+staged = '[+$count](bg:#A8006A fg:white)'
+renamed = '[](bg:#A8006A fg:#FF8B6B)'
+deleted = '[](bg:#A8006A fg:#FF8B6B)'
 
 [jobs]
 format = '[$symbol]($style)'
 symbol = '|'
-style = '#86A800'
+style = '#73A800'
 
 [kubernetes]
 disabled = false
 format = '[ $symbol$context( \($namespace\)) ]($style)'
 symbol = '⎈'
-style = 'bg:#86A800'
+style = 'bg:#73A800'
 
 [kubernetes.context_aliases]
 'gke.*_(?P<var_cluster>[\w-]+)' = 'gke-$var_cluster'
