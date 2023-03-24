@@ -69,6 +69,11 @@ staged = '[+$count](bg:#B84464 fg:white)'
 renamed = '[](bg:#B84464 fg:#FF8B6B)'
 deleted = '[](bg:#B84464 fg:#FF8B6B)'
 
+[jobs]
+format = '[$symbol]($style)'
+symbol = '|'
+style = '#7C9E00'
+
 [kubernetes]
 disabled = false
 format = '[ $symbol$context( \($namespace\)) ]($style)'
