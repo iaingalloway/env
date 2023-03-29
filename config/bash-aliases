@@ -1,10 +1,21 @@
 #~/.bash_aliases
 
+# git
+source /usr/share/bash-completion/completions/git
+alias g=git
+__git_complete g __git_main
+alias gs='git status'
+__git_complete gs _git_status
+alias ga='git add'
+__git_complete ga _git_add
+
 # kubectl
 alias k=kubectl
 complete -o default -F __start_kubectl k
-
 alias kclear='kubectl config unset current-context'
-
 alias kuse='kubectl config use-context'
-complete -F __start_kubectl kuse
+_kubectl_contexts()
+{
+    COMPREPLY=( $( compgen -W "$(kubectl config get-contexts --output='name')" -- "$cur" ) )
+}
+complete -F _kubectl_contexts kuse

@@ -123,11 +123,6 @@ source <(kind completion bash)
 # configure kubectl completion
 source <(kubectl completion bash)
 
-# configure git aliases
-source /usr/share/bash-completion/completions/git
-alias g=git
-__git_complete g __git_main
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/iain/google-cloud-sdk/path.bash.inc' ]; then . '/home/iain/google-cloud-sdk/path.bash.inc'; fi
 
