@@ -13,6 +13,7 @@ __git_complete ga _git_add
 alias k=kubectl
 complete -o default -F __start_kubectl k
 alias kclear='kubectl config unset current-context'
+alias klist='kubectl config get-contexts'
 alias kuse='kubectl config use-context'
 _kubectl_contexts()
 {
