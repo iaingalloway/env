@@ -11,6 +11,7 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 
 # git
 New-Alias g git
+Import-Module posh-git
 
 function gs { git status $args }
 function ga { git add $args }
