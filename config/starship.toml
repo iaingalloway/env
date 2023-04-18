@@ -62,7 +62,7 @@ style = 'bg:#A8006A'
 cherry_pick = '[🍒 PICKING](bg:#A8006A fg:#FF8B6B)'
 
 [git_status]
-format = '[ $up_to_date$conflicted$untracked$modified$renamed$deleted$stashed$ahead_behind$staged ]($style)'
+format = '[( $up_to_date$conflicted$untracked$modified$renamed$deleted$stashed$ahead_behind$staged) ]($style)'
 style = 'bg:#A8006A'
 conflicted = '[🏳](bg:#A8006A fg:#FF8B6B)'
 up_to_date = '[](bg:#A8006A fg:#C4FF78)'
