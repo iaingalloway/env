@@ -31,6 +31,18 @@
         {
             "command": "closePane",
             "keys": "ctrl+f4"
+        },
+        {
+            "command": "duplicateTab",
+            "keys": "ctrl+t"
+        },
+        {
+            "command": "splitPane",
+            "keys": "shift+pageup"
+        },
+        {
+            "command": { "action": "moveFocus", "direction": "previous" },
+            "keys": "alt+shift+down"
         }
     ],
     "copyFormatting": "none",
