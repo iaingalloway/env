@@ -29,7 +29,7 @@
             "keys": "alt+shift+d"
         },
         {
-            "command": "closeTab",
+            "command": "closePane",
             "keys": "ctrl+f4"
         }
     ],
