@@ -12,6 +12,7 @@ add_newline = true
 format = """\
 [](fg:#0033FF)\
 $os\
+$hostname\
 [](bg:#00A8A5 fg:#0033FF)\
 $directory\
 [](bg:#A8006A fg:#00A8A5)\
@@ -75,6 +76,10 @@ modified = '[](bg:#A8006A fg:#FF8B6B)'
 staged = '[+$count](bg:#A8006A fg:white)'
 renamed = '[](bg:#A8006A fg:#FF8B6B)'
 deleted = '[](bg:#A8006A fg:#FF8B6B)'
+
+[hostname]
+format = '[$hostname ]($style)'
+style = 'bg:#0033FF'
 
 [jobs]
 format = '[$symbol]($style)'
