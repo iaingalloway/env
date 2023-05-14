@@ -33,7 +33,7 @@ error_symbol = '[](#A8006A)'
 
 [directory]
 format = '[ $path ]($style)'
-home_symbol = ''
+home_symbol = ''
 style = 'bg:#00A8A5'
 truncate_to_repo = true
 truncation_symbol = '…/'
