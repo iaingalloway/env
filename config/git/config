@@ -40,6 +40,7 @@
   rebase = true
 [push]
   autoSetupRemote = true
+  default = current
 [rebase]
   autostash = true
   autosquash = true
