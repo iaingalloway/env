@@ -34,7 +34,7 @@
 [fetch]
   prune = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [pull]
   rebase = true
 [push]
