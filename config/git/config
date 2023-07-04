@@ -1,5 +1,6 @@
 [core]
   editor = nano
+  commentChar = "-"
 
 [user]
   name = Iain Galloway
