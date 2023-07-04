@@ -1,6 +1,6 @@
 param(
-    [Parameter(Mandatory=$true)]
-    [string]$RepoLocation
+  [Parameter(Mandatory=$true)]
+  [string]$RepoLocation
 )
 
 $PowerShellProfileLocation = Join-Path $env:USERPROFILE "Documents\PowerShell"
