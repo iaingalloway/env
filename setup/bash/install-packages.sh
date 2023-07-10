@@ -2,4 +2,7 @@
 
 set -euo pipefail
 
-sudo apt install gh git
+sudo add-apt-repository ppa:git-core/ppa -y
+sudo apt update
+sudo apt install git -y
+sudo apt install gh
