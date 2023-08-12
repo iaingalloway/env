@@ -32,6 +32,12 @@
   # Rebase on top of origin/main
   up = !git fetch origin --prune && git rebase origin/$(git main)
 
+  # Get the name of the current branch
+  current-branch = rev-parse --abbrev-ref HEAD
+
+  # Update timestamps of unpushed commits to the current time
+  update-timestamps = !git rebase -x 'git commit --amend --no-edit --date=now' origin/$(git current-branch)
+
 [fetch]
   prune = true
 [init]
