@@ -9,7 +9,7 @@ New-Item -ItemType SymbolicLink -Path (Join-Path $PowerShellProfileLocation "Mic
 
 $ConfigLocation = Join-Path $env:USERPROFILE ".config"
 New-Item -ItemType Directory -Path $ConfigLocation -Force | Out-Null
-New-Item -ItemType SymbolicLink -Path (Join-Path $ConfigLocation "starship.toml") -Target (Join-Path $RepoLocation "\config\starship.toml") -Force | Out-Null
+New-Item -ItemType SymbolicLink -Path (Join-Path $ConfigLocation "starship.toml") -Target (Join-Path $RepoLocation "\config\starship\starship.toml") -Force | Out-Null
 
 New-Item -ItemType SymbolicLink -Path (Join-Path $env:USERPROFILE ".gitconfig") -Target (Join-Path $RepoLocation "config\git\config") -Force | Out-Null
 
