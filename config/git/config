@@ -10,7 +10,7 @@
 [github]
   user = iaingalloway
 
-[includeIf "hasconfig:remote.*.url:*dev.azure.com*/menziesdistribution/**"]
+[includeIf "hasconfig:remote.*.url:**/*dev.azure.com*/menziesdistribution/**"]
   path = .config/git/menzies
 
 [alias]
