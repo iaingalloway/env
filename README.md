@@ -8,7 +8,7 @@ git clone git@github.com:iaingalloway/env.git repos/env
 bash repos/env/setup-env.sh
 ```
 
-## Powershell (needs an elevated prompt or Developer Mode)
+## Powershell (needs an elevated prompt)
 
 ```powershell
 New-Item -Type Directory source\repos -Force
