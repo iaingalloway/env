@@ -15,11 +15,19 @@
   path = .config/git/menzies
 
 [alias]
+  a = add
+
   b = branch
 
   co = checkout
 
   d = difftool
+
+  f = fetch
+
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+
+
 
   pushf = push --force-with-lease
 
@@ -45,6 +53,8 @@
   # Update timestamps of unpushed commits to the current time
   update-timestamps = !git rebase -x 'git commit --amend --no-edit --date=now' origin/$(git current-branch)
 
+  pwd = !pwd && cd \"${GIT_PREFIX:-.}\" && pwd
+
 [fetch]
   prune = true
 [init]
@@ -54,5 +64,6 @@
 [push]
   autoSetupRemote = true
 [rebase]
+  abbreviateCommands = true
   autostash = true
   autosquash = true
