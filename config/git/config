@@ -44,6 +44,9 @@
   # Append the currently staged files to the latest commit
   append = commit --amend --reuse-message=HEAD
 
+  # Append the currently staged files to the latest commit and force push
+  appendf = !git append && git pushf
+
   # Discard all changes to the working directory
   discard = !cd \"${GIT_PREFIX:-.}\" && git reset HEAD . -- && git checkout -- . && git clean -fd .
 
