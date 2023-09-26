@@ -47,6 +47,9 @@
   # Append the currently staged files to the latest commit and force push
   appendf = !git append && git pushf
 
+  # Check if there are any changes in the working tree
+  changes = !git diff --quiet --cached && git diff-files --quiet && git ls-files --others --exclude-standard >/dev/null 2>&1 || (echo "There are changes" && exit 1)
+
   # Discard all changes to the working directory
   discard = !cd \"${GIT_PREFIX:-.}\" && git reset HEAD . -- && git checkout -- . && git clean -fd .
 
