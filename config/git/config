@@ -1,7 +1,8 @@
 [core]
   editor = nano
   commentChar = "-"
-	autocrlf = false
+  eol = lf
+	autocrlf = input
 
 [user]
   name = Iain Galloway
