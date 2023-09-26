@@ -17,6 +17,8 @@
 [alias]
   a = add
 
+  ai = add --interactive
+
   b = branch
 
   ci = commit
