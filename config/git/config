@@ -19,6 +19,12 @@
 
   b = branch
 
+  ci = commit
+
+  cm = commit --message
+
+  cma = commit --all --message
+
   co = checkout
 
   d = difftool
