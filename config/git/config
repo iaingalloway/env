@@ -31,7 +31,7 @@
 
   d = difftool
 
-  f = fetch
+  f = fetch origin --prune
 
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 
@@ -68,7 +68,7 @@
   pull-all = "!for dir in */; do echo \"\\n$dir\"; cd \"$dir\" || continue; git checkout main; git pull; cd ..; done"
 
   # Rebase on top of origin/main
-  up = !git fetch origin --prune && git rebase origin/$(git main)
+  up = !git f && git rebase origin/$(git main)
 
   # Get the name of the current branch
   current-branch = rev-parse --abbrev-ref HEAD
