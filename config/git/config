@@ -2,7 +2,7 @@
   editor = nano
   commentChar = "-"
   eol = lf
-	autocrlf = input
+  autocrlf = input
 
 [user]
   name = Iain Galloway
