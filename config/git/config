@@ -20,6 +20,8 @@
 
   ai = add --interactive
 
+  ap = add --patch
+
   b = branch
 
   ci = commit
