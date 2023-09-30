@@ -67,8 +67,8 @@
   # Work out the name of main branch
   main = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
 
-  # Update all repos in subfolders of the current directory
-  pull-all = "!for dir in */; do echo \"\\n$dir\"; cd \"$dir\" || continue; git checkout main; git pull; cd ..; done"
+  # Perform a git command in all each subdirectory of the current directory
+  foreach-subdirectory = !ls -d */ | xargs -I{} git -C {}
 
   # Rebase on top of origin/main
   up = !git f && git rebase origin/$(git main)
