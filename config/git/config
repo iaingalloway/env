@@ -48,6 +48,8 @@
 
   s = status
 
+  sh = show
+
   t = tag
 
   unstage = reset HEAD
