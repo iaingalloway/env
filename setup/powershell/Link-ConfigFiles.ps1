@@ -16,6 +16,7 @@ New-Item -ItemType SymbolicLink -Path (Join-Path $env:USERPROFILE ".gitconfig") 
 $GitConfigLocation = Join-Path $ConfigLocation "git"
 New-Item -ItemType Directory -Path $GitConfigLocation -Force | Out-Null
 New-Item -ItemType SymbolicLink -Path (Join-Path $GitConfigLocation "menzies") -Target (Join-Path $RepoLocation "\config\git\menzies") -Force | Out-Null
+New-Item -ItemType SymbolicLink -Path (Join-Path $GitConfigLocation "ignore") -Target (Join-Path $RepoLocation "\config\git\ignore") -Force | Out-Null
 
 $WindowsTerminalSettingsLocation = Join-Path $env:LOCALAPPDATA "Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
 New-Item -ItemType Directory -Path $WindowsTerminalSettingsLocation -Force | Out-Null
