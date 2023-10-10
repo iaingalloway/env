@@ -65,7 +65,7 @@
   appendf = !git append && git pushf
 
   # Get the name of the current branch
-  current-branch = !git has-commits && git rev-parse --abbrev-ref HEAD || echo 'No commits'
+  current-branch = !git rev-parse --verify HEAD >/dev/null 2>&1 && git rev-parse --abbrev-ref HEAD || echo 'No commits'
 
   # Discard all changes to the working directory
   discard = !cd \"${GIT_PREFIX:-.}\" && git reset HEAD . -- && git restore -- . && git clean -fd .
@@ -75,9 +75,6 @@
 
   # Show the status of each subdirectory of the current directory
   foreach-subdirectory-status = foreach-subdirectory short-status
-
-  # Work out if the repository has any commits
-  has-commits = !git rev-parse --verify HEAD >/dev/null 2>&1
 
   # Work out the name of main branch
   main = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
