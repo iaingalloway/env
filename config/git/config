@@ -77,7 +77,7 @@
   foreach-subdirectory-status = foreach-subdirectory short-status
 
   # Work out the name of main branch
-  main = !"git remote show origin | awk '/HEAD branch/ {print $3}'"
+  main = !git remote show origin | awk '/HEAD branch/ {print $3}'
 
   # Get the path to the root of the git repository
   pwd = rev-parse --show-toplevel
