@@ -54,7 +54,7 @@
 
   swb = switch -
 
-  t = tag
+  t = tag -a --message=""
 
   unstage = reset HEAD
 
