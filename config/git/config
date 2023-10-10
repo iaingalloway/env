@@ -77,7 +77,7 @@
   foreach-subdirectory-status = foreach-subdirectory short-status
 
   # Work out the name of main branch
-  main = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
+  main = !"git remote show origin | awk '/HEAD branch/ {print $3}'"
 
   # Get the path to the root of the git repository
   pwd = rev-parse --show-toplevel
@@ -86,7 +86,7 @@
   short-status = !echo && git pwd && git current-branch && git status --porcelain
 
   # Rebase on top of origin/main
-  up = !git f && git rebase origin/$(git main)
+  up = !git fetch && git rebase origin/$(git main)
 
   # Update timestamps of unpushed commits to the current time
   update-timestamps = !git rebase -x 'git commit --amend --no-edit --date=now' origin/$(git current-branch)
