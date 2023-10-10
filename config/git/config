@@ -83,7 +83,7 @@
   main = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
 
   # Get the path to the root of the git repository
-  pwd = !cd \"${GIT_PREFIX:-.}\" && pwd
+  pwd = rev-parse --show-toplevel
 
   # Show a summary of status of the repository
   short-status = !echo && git pwd && git current-branch && git status --porcelain
