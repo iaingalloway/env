@@ -65,7 +65,10 @@
   appendf = !git append && git pushf
 
   # Check if there are any changes in the working tree
-  changes = !git diff --quiet --cached && git diff-files --quiet && git ls-files --others --exclude-standard >/dev/null 2>&1 || (echo "There are changes" && exit 1)
+  changes = !git has-commits && (git diff --quiet --cached && git diff-files --quiet && git ls-files --others --exclude-standard >/dev/null 2>&1 && echo 'Clean') || echo 'Dirty'
+
+  # Get the name of the current branch
+  current-branch = !git has-commits && git rev-parse --abbrev-ref HEAD || echo 'No commits'
 
   # Discard all changes to the working directory
   discard = !cd \"${GIT_PREFIX:-.}\" && git reset HEAD . -- && git restore -- . && git clean -fd .
@@ -73,19 +76,26 @@
   # Perform a git command in all each subdirectory of the current directory
   foreach-subdirectory = !ls -d */ | xargs -I{} git -C {}
 
+  # Show the status of each subdirectory of the current directory
+  foreach-subdirectory-status = foreach-subdirectory short-status
+
+  # Work out if the repository has any commits
+  has-commits = !git rev-parse --verify HEAD >/dev/null 2>&1
+
   # Work out the name of main branch
   main = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
+
+  # Get the path to the root of the git repository
+  pwd = !cd \"${GIT_PREFIX:-.}\" && pwd
+
+  # Show a summary of status of the repository
+  short-status = !echo && git pwd && git current-branch && git changes;
 
   # Rebase on top of origin/main
   up = !git f && git rebase origin/$(git main)
 
-  # Get the name of the current branch
-  current-branch = rev-parse --abbrev-ref HEAD
-
   # Update timestamps of unpushed commits to the current time
   update-timestamps = !git rebase -x 'git commit --amend --no-edit --date=now' origin/$(git current-branch)
-
-  pwd = !pwd && cd \"${GIT_PREFIX:-.}\" && pwd
 
 [fetch]
   prune = true
