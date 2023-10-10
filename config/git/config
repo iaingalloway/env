@@ -63,8 +63,14 @@
   # Append the currently staged files to the latest commit
   append = commit --amend --reuse-message=HEAD
 
+  # Append all changes in the working tree to the latest commit
+  append-all = !git add --all && git append
+
   # Append the currently staged files to the latest commit and force push
   appendf = !git append && git pushf
+
+  # Append all changes in the working tree to the latest commit and force push
+  appendf-all = !git append-all && git pushf
 
   # Get the name of the current branch
   current-branch = !git rev-parse --verify HEAD >/dev/null 2>&1 && git rev-parse --abbrev-ref HEAD || echo 'No commits'
