@@ -31,7 +31,7 @@
   # Commit all changes in the working tree with the given message
   cma = !git add --all && git commit --message
 
-  co = checkout
+  co = !echo Use git switch or git restore && exit 1
 
   d = difftool
 
