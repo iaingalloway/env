@@ -103,6 +103,7 @@
 
 [fetch]
   prune = true
+  pruneTags = true
 [init]
   defaultBranch = main
 [pull]
