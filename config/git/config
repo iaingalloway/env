@@ -55,6 +55,8 @@
 
   swb = switch -
 
+  swc = switch -c
+
   # Create a tag with an empty message
   t = tag -a --message=""
 
