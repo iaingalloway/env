@@ -76,7 +76,7 @@
   current-branch = !git rev-parse --verify HEAD >/dev/null 2>&1 && git rev-parse --abbrev-ref HEAD || (echo 'No commits' && exit 1)
 
   # Discard all changes in the working tree
-  discard = !cd \"${GIT_PREFIX:-.}\" && git reset HEAD . -- && git restore -- . && git clean -fd .
+  discard = !git reset HEAD . -- && git restore -- . && git clean -fd .
 
   # Perform a git command in each subdirectory of the current directory
   foreach-subdirectory = !ls -d */ | xargs -I{} git -C {}
