@@ -113,5 +113,5 @@
   followTags = true
 [rebase]
   abbreviateCommands = true
-  autostash = true
-  autosquash = true
+  autoStash = true
+  autoSquash = true
