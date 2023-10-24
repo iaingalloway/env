@@ -13,5 +13,4 @@ ln -sf "$REPO_LOCATION/config/starship/starship.toml" "$HOME/.config/starship.to
 ln -sf "$REPO_LOCATION/config/git/config" "$HOME/.gitconfig"
 
 mkdir -p "$HOME/.config/git"
-ln -sf "$REPO_LOCATION/config/git/menzies" "$HOME/.config/git/menzies"
 ln -sf "$REPO_LOCATION/config/git/ignore" "$HOME/.config/git/ignore"

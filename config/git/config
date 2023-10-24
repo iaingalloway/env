@@ -13,7 +13,7 @@
   user = iaingalloway
 
 [includeIf "hasconfig:remote.*.url:**/*dev.azure.com*/menziesdistribution/**"]
-  path = .config/git/menzies
+  email = iain.galloway@menziesdistribution.com
 
 [alias]
   a = add
