@@ -24,12 +24,17 @@
 
   b = branch
 
+  c = commit
+
   ci = commit
 
   cm = commit --message
 
   # Commit all changes in the working tree with the given message
   cma = !git add --all && git commit --message
+
+  # Commit all changes in the working tree with the given message and push
+  cmap = "!f() { git add --all && git commit -m \"$1\" && git push; }; f"
 
   co = !echo Use git switch or git restore && exit 1
 
